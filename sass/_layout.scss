@@ -1,0 +1,102 @@
+.container {
+max-width: 120rem;
+margin: 8rem auto;
+background-color: var(--color-grey-light2);
+min-height: 50rem;
+box-shadow: var(--shadow-dark);
+
+@media only screen and (max-width:$bg-largest){
+margin: 0;
+max-width: 100%;
+width: 100%;
+
+}
+}
+
+.header{
+    font-size: 1.4rem;
+height: 7rem;
+background-color: white;
+border-bottom: var(--line);
+display:flex;
+justify-content: space-between;
+align-items: center;
+
+
+@media only screen and (max-width:$bg-esmall){
+    flex-wrap: wrap; //wrap into new line
+    height: 11rem;
+    align-content: space-around;
+}
+}
+
+.content{
+display: flex;
+
+@media only screen and (max-width:$bg-medium){
+flex-direction: column;
+}
+
+}
+
+.sidebar{
+    background-color: var(--color-grey-dark1);
+    flex: 0 0 18%; //element does not shrink/grow and occupies 18%of parent width
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hotel-view{
+
+flex: 1; //element should take all the remaining place
+
+
+}
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light2);
+    border-bottom: var(--line);
+
+    @media only screen and (max-width:$bg-medium){
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width:$bg-small){
+        flex-direction: column;
+    }
+}
+
+.describtion{
+    background-color:white;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    font-size: 1.5rem;
+
+    @media only screen and (max-width:$bg-medium){
+        padding: 2rem;
+        margin-right: 3.5rem;
+    }
+
+    @media only screen and (max-width:$bg-small){
+       margin-right: 0;
+    }
+}
+
+.user-reviews{
+    flex: 1;
+    font-size: 1.4rem;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta{
+    background-color: var(--color-grey-light1);
+}
